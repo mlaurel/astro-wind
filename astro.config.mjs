@@ -8,6 +8,7 @@ import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 import partytown from '@astrojs/partytown';
 import icon from 'astro-icon';
+<<<<<<< HEAD
 import tasks from './src/utils/tasks';
 
 import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin } from './src/utils/frontmatter.mjs';
@@ -18,16 +19,32 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const whenExternalScripts = (items = []) =>
   ANALYTICS.vendors.googleAnalytics.id && ANALYTICS.vendors.googleAnalytics.partytown
+=======
+import compress from 'astro-compress';
+
+import astrowind from './src/integration';
+
+import { readingTimeRemarkPlugin, responsiveTablesRehypePlugin } from './src/utils/frontmatter.mjs';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+const hasExternalScripts = false;
+const whenExternalScripts = (items = []) =>
+  hasExternalScripts
+>>>>>>> source-4.5
     ? Array.isArray(items)
       ? items.map((item) => item())
       : [items()]
     : [];
 
 export default defineConfig({
+<<<<<<< HEAD
   site: SITE.site,
   base: SITE.base,
   trailingSlash: SITE.trailingSlash ? 'always' : 'never',
 
+=======
+>>>>>>> source-4.5
   output: 'static',
 
   integrations: [
@@ -59,7 +76,24 @@ export default defineConfig({
       })
     ),
 
+<<<<<<< HEAD
     tasks(),
+=======
+    compress({
+      CSS: true,
+      HTML: {
+        'html-minifier-terser': {
+          removeAttributeQuotes: false,
+        },
+      },
+      Image: false,
+      JavaScript: true,
+      SVG: false,
+      Logger: 1,
+    }),
+
+    astrowind(),
+>>>>>>> source-4.5
   ],
 
   image: {

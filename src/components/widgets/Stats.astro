@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 import type { Stats } from '~/types';
+=======
+import type { Stats as Props } from '~/types';
+>>>>>>> source-4.5
 import WidgetWrapper from '../ui/WidgetWrapper.astro';
 import Headline from '../ui/Headline.astro';
 import { Icon } from 'astro-icon/components';
@@ -14,7 +18,11 @@ const {
   isDark = false,
   classes = {},
   bg = await Astro.slots.render('bg'),
+<<<<<<< HEAD
 } = Astro.props as Stats;
+=======
+} = Astro.props;
+>>>>>>> source-4.5
 ---
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>

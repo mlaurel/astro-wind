@@ -1,6 +1,10 @@
 ---
 import { Icon } from 'astro-icon/components';
+<<<<<<< HEAD
 import { SITE } from '~/utils/config';
+=======
+import { SITE } from 'astrowind:config';
+>>>>>>> source-4.5
 import { getHomePermalink } from '~/utils/permalinks';
 
 interface Link {
@@ -91,7 +95,11 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
         )
       }
 
+<<<<<<< HEAD
       <div class="text-sm mr-4 dark:text-slate-400">
+=======
+      <div class="text-sm mr-4 dark:text-muted">
+>>>>>>> source-4.5
         <Fragment set:html={footNote} />
       </div>
     </div>

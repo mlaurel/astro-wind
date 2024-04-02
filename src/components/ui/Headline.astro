@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 import type { Headline } from "~/types";
+=======
+import type { Headline as Props } from "~/types";
+>>>>>>> source-4.5
 import { twMerge } from "tailwind-merge";
 
 const {
@@ -7,7 +11,11 @@ const {
   subtitle = await Astro.slots.render("subtitle"),
   tagline,
   classes = {},
+<<<<<<< HEAD
 } = Astro.props as Headline;
+=======
+} = Astro.props;
+>>>>>>> source-4.5
 
 const {
   container: containerClass = "max-w-3xl",

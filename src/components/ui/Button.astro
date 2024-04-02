@@ -1,7 +1,11 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { twMerge } from 'tailwind-merge';
+<<<<<<< HEAD
 import type { CallToAction } from '~/types';
+=======
+import type { CallToAction as Props } from '~/types';
+>>>>>>> source-4.5
 
 const {
   variant = 'secondary',
@@ -11,7 +15,11 @@ const {
   class: className = '',
   type,
   ...rest
+<<<<<<< HEAD
 } = Astro.props as CallToAction;
+=======
+} = Astro.props;
+>>>>>>> source-4.5
 
 const variants = {
   primary: 'btn-primary',

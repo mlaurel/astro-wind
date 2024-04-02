@@ -11,6 +11,11 @@ import Features3 from '~/components/widgets/Features3.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Brands from '~/components/widgets/Brands.astro';
 
+<<<<<<< HEAD
+=======
+import YoutubeVideo from '~/components/common/YoutubeVideo.astro';
+
+>>>>>>> source-4.5
 const metadata = {
   title: 'Startup Landing Page',
 };
@@ -39,6 +44,7 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
+<<<<<<< HEAD
       Step into the spotlight with <span class="font-semibold">Astrowind</span> templates, your pathway to fortifying
       your startup's digital footprint, fostering credibility, and expanding your reach.
     </Fragment>
@@ -56,6 +62,14 @@ const metadata = {
         >
         </iframe>
       </div>
+=======
+      Step into the spotlight with <span class="font-semibold">Astrowind</span> templates, your pathway to fortifying your
+      startup's digital footprint, fostering credibility, and expanding your reach.
+    </Fragment>
+
+    <Fragment slot="image">
+      <YoutubeVideo videoId="gxBkghlglTg" title="Astro just Launched.... Could it be the ultimate web framework?" />
+>>>>>>> source-4.5
     </Fragment>
   </Hero>
 
@@ -300,6 +314,7 @@ const metadata = {
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
+<<<<<<< HEAD
     actions={[{
       variant: "primary",
       target: '_blank',
@@ -307,6 +322,17 @@ const metadata = {
       href: 'https://github.com/onwidget/astrowind',
       icon: 'tabler:download',
     }]}
+=======
+    actions={[
+      {
+        variant: 'primary',
+        target: '_blank',
+        text: 'Get templates',
+        href: 'https://github.com/onwidget/astrowind',
+        icon: 'tabler:download',
+      },
+    ]}
+>>>>>>> source-4.5
   >
     <Fragment slot="title">Be a part of our vision</Fragment>
 

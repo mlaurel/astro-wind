@@ -1,8 +1,15 @@
 ---
+<<<<<<< HEAD
 import type { Form } from '~/types';
 import Button from '~/components/ui/Button.astro';
 
 const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props as Form;
+=======
+import type { Form as Props } from '~/types';
+import Button from '~/components/ui/Button.astro';
+
+const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props;
+>>>>>>> source-4.5
 ---
 
 <form>
@@ -38,7 +45,11 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
         </label>
         <textarea
           id="textarea"
+<<<<<<< HEAD
           name="textarea"
+=======
+          name={textarea.name ? textarea.name : 'message'}
+>>>>>>> source-4.5
           rows={textarea.rows ? textarea.rows : 4}
           placeholder={textarea.placeholder}
           class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
@@ -70,7 +81,13 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
   {
     button && (
       <div class="mt-10 grid">
+<<<<<<< HEAD
         <Button variant="primary" type="submit">{button}</Button>
+=======
+        <Button variant="primary" type="submit">
+          {button}
+        </Button>
+>>>>>>> source-4.5
       </div>
     )
   }

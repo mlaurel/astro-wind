@@ -97,7 +97,11 @@ export interface Widget {
   id?: string;
   isDark?: boolean;
   bg?: string;
+<<<<<<< HEAD
   classes?: Record<string, string>;
+=======
+  classes?: Record<string, string | Record<string, string>>;
+>>>>>>> source-4.5
 }
 
 export interface Headline {
@@ -122,7 +126,11 @@ interface Social {
 }
 
 export interface Stat {
+<<<<<<< HEAD
   amount?: number;
+=======
+  amount?: number | string;
+>>>>>>> source-4.5
   title?: string;
   icon?: string;
 }
@@ -140,7 +148,11 @@ export interface Price {
   title?: string;
   subtitle?: string;
   description?: string;
+<<<<<<< HEAD
   price?: number;
+=======
+  price?: number | string;
+>>>>>>> source-4.5
   period?: string;
   items?: Array<Item>;
   callToAction?: CallToAction;
@@ -166,6 +178,10 @@ export interface Input {
 
 export interface Textarea {
   label?: string;
+<<<<<<< HEAD
+=======
+  name?: string;
+>>>>>>> source-4.5
   placeholder?: string;
   rows?: number;
 }
@@ -175,7 +191,11 @@ export interface Disclaimer {
 }
 
 // COMPONENTS
+<<<<<<< HEAD
 export interface CallToAction extends HTMLAttributes<a> {
+=======
+export interface CallToAction extends Omit<HTMLAttributes<'a'>, 'slot'> {
+>>>>>>> source-4.5
   variant?: 'primary' | 'secondary' | 'tertiary' | 'link';
   text?: string;
   icon?: string;
@@ -207,7 +227,11 @@ export interface Form {
 }
 
 // WIDGETS
+<<<<<<< HEAD
 export interface Hero extends Headline, Widget {
+=======
+export interface Hero extends Omit<Headline,"classes">, Widget {
+>>>>>>> source-4.5
   content?: string;
   image?: string | unknown;
   callToAction1?: CallToAction;
@@ -215,6 +239,7 @@ export interface Hero extends Headline, Widget {
   isReversed?: boolean;
 }
 
+<<<<<<< HEAD
 export interface Team extends Headline, Widget {
   team?: Array<TeamMember>;
 }
@@ -228,20 +253,47 @@ export interface Pricing extends Headline, Widget {
 }
 
 export interface Testimonials extends Headline, Widget {
+=======
+export interface Team extends Omit<Headline,"classes">, Widget {
+  team?: Array<TeamMember>;
+}
+
+export interface Stats extends Omit<Headline,"classes">, Widget {
+  stats?: Array<Stat>;
+}
+
+export interface Pricing extends Omit<Headline,"classes">, Widget {
+  prices?: Array<Price>;
+}
+
+export interface Testimonials extends Omit<Headline,"classes">, Widget {
+>>>>>>> source-4.5
   testimonials?: Array<Testimonial>;
   callToAction?: CallToAction;
 }
 
+<<<<<<< HEAD
 export interface Brands extends Headline, Widget {
+=======
+export interface Brands extends Omit<Headline,"classes">, Widget {
+>>>>>>> source-4.5
   icons?: Array<string>;
   images?: Array<Image>;
 }
 
+<<<<<<< HEAD
 export interface Features extends Headline, Widget {
   image?: string | unknown;
   video?: Video;
   items: Array<Item>;
   columns: number;
+=======
+export interface Features extends Omit<Headline,"classes">, Widget {
+  image?: string | unknown;
+  video?: Video;
+  items?: Array<Item>;
+  columns?: number;
+>>>>>>> source-4.5
   defaultIcon?: string;
   callToAction1?: CallToAction;
   callToAction2?: CallToAction;
@@ -250,14 +302,22 @@ export interface Features extends Headline, Widget {
   isAfterContent?: boolean;
 }
 
+<<<<<<< HEAD
 export interface Faqs extends Headline, Widget {
+=======
+export interface Faqs extends Omit<Headline,"classes">, Widget {
+>>>>>>> source-4.5
   iconUp?: string;
   iconDown?: string;
   items?: Array<Item>;
   columns?: number;
 }
 
+<<<<<<< HEAD
 export interface Steps extends Headline, Widget {
+=======
+export interface Steps extends Omit<Headline,"classes">, Widget {
+>>>>>>> source-4.5
   items: Array<{
     title: string;
     description?: string;
@@ -269,7 +329,11 @@ export interface Steps extends Headline, Widget {
   isReversed?: boolean;
 }
 
+<<<<<<< HEAD
 export interface Content extends Headline, Widget {
+=======
+export interface Content extends Omit<Headline,"classes">, Widget {
+>>>>>>> source-4.5
   content?: string;
   image?: string | unknown;
   items?: Array<Item>;
@@ -279,4 +343,8 @@ export interface Content extends Headline, Widget {
   callToAction?: CallToAction;
 }
 
+<<<<<<< HEAD
 export interface Contact extends Headline, Form, Widget {}
+=======
+export interface Contact extends Omit<Headline,"classes">, Form, Widget {}
+>>>>>>> source-4.5

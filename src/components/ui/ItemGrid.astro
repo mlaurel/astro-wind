@@ -1,10 +1,19 @@
 ---
+<<<<<<< HEAD
 import { twMerge } from 'tailwind-merge';
 import type { ItemGrid } from '~/types';
 import Button from './Button.astro';
 import { Icon } from 'astro-icon/components';
 
 const { items = [], columns, defaultIcon = '', classes = {} } = Astro.props as ItemGrid;
+=======
+import type { ItemGrid as Props } from '~/types';
+import { twMerge } from 'tailwind-merge';
+import Button from './Button.astro';
+import { Icon } from 'astro-icon/components';
+
+const { items = [], columns, defaultIcon = '', classes = {} } = Astro.props;
+>>>>>>> source-4.5
 
 const {
   container: containerClass = '',

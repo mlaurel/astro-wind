@@ -1,6 +1,10 @@
 ---
 import { Icon } from 'astro-icon/components';
+<<<<<<< HEAD
 import type { Brands } from '~/types';
+=======
+import type { Brands as Props } from '~/types';
+>>>>>>> source-4.5
 import Headline from '~/components/ui/Headline.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
 const {
@@ -13,7 +17,11 @@ const {
   isDark = false,
   classes = {},
   bg = await Astro.slots.render('bg'),
+<<<<<<< HEAD
 } = Astro.props as Brands;
+=======
+} = Astro.props;
+>>>>>>> source-4.5
 ---
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>

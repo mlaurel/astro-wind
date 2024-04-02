@@ -2,7 +2,11 @@ import type { PaginateFunction } from 'astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import type { Post } from '~/types';
+<<<<<<< HEAD
 import { APP_BLOG } from '~/utils/config';
+=======
+import { APP_BLOG } from 'astrowind:config';
+>>>>>>> source-4.5
 import { cleanSlug, trimSlash, BLOG_BASE, POST_PERMALINK_PATTERN, CATEGORY_BASE, TAG_BASE } from './permalinks';
 
 const generatePermalink = async ({
@@ -90,6 +94,21 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
   };
 };
 
+<<<<<<< HEAD
+=======
+const getRandomizedPosts = (array: Post[], num: number) => {
+  const newArray: Post[] = [];
+
+  while (newArray.length < num && array.length > 0) {
+    const randomIndex = Math.floor(Math.random() * array.length);
+    newArray.push(array[randomIndex]);
+    array.splice(randomIndex, 1);
+  }
+
+  return newArray;
+};
+
+>>>>>>> source-4.5
 const load = async function (): Promise<Array<Post>> {
   const posts = await getCollection('post');
   const normalizedPosts = posts.map(async (post) => await getNormalizedPost(post));
@@ -105,6 +124,10 @@ let _posts: Array<Post>;
 
 /** */
 export const isBlogEnabled = APP_BLOG.isEnabled;
+<<<<<<< HEAD
+=======
+export const isRelatedPostsEnabled = APP_BLOG.isRelatedPostsEnabled;
+>>>>>>> source-4.5
 export const isBlogListRouteEnabled = APP_BLOG.list.isEnabled;
 export const isBlogPostRouteEnabled = APP_BLOG.post.isEnabled;
 export const isBlogCategoryRouteEnabled = APP_BLOG.category.isEnabled;
@@ -225,3 +248,26 @@ export const getStaticPathsBlogTag = async ({ paginate }: { paginate: PaginateFu
     )
   );
 };
+<<<<<<< HEAD
+=======
+
+/** */
+export function getRelatedPosts(allPosts: Post[], currentSlug: string, currentTags: string[]) {
+  if (!isBlogEnabled || !isRelatedPostsEnabled) return [];
+
+  const relatedPosts = getRandomizedPosts(
+    allPosts.filter((post) => post.slug !== currentSlug && post.tags?.some((tag) => currentTags.includes(tag))),
+    APP_BLOG.relatedPostsCount
+  );
+
+  if (relatedPosts.length < APP_BLOG.relatedPostsCount) {
+    const morePosts = getRandomizedPosts(
+      allPosts.filter((post) => post.slug !== currentSlug && !post.tags?.some((tag) => currentTags.includes(tag))),
+      APP_BLOG.relatedPostsCount - relatedPosts.length
+    );
+    relatedPosts.push(...morePosts);
+  }
+
+  return relatedPosts;
+}
+>>>>>>> source-4.5

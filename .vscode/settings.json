@@ -3,16 +3,26 @@
   "eslint.validate": [
     "javascript",
     "javascriptreact",
+<<<<<<< HEAD
     "astro", // Enable .astro
     "typescript", // Enable .ts
     "typescriptreact" // Enable .tsx
+=======
+    "astro",
+    "typescript",
+    "typescriptreact"
+>>>>>>> source-4.5
   ],
   "files.associations": {
     "*.mdx": "markdown"
   },
   "prettier.documentSelectors": ["**/*.astro"],
   "[astro]": {
+<<<<<<< HEAD
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+=======
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+>>>>>>> source-4.5
   },
   "yaml.schemas": {
     "./.vscode/astrowind/config-schema.json": "/src/config.yaml"

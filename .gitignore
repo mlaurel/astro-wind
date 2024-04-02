@@ -19,7 +19,10 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
+<<<<<<< HEAD
 package-lock.json
+=======
+>>>>>>> source-4.5
 pnpm-lock.yaml
 
 .astro
